@@ -14,4 +14,13 @@ creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
 gc = gspread.authorize(creds)
 
 # Open your Google Sheet by URL
+
 sheet = gc.open_by_url("https://docs.google.com/spreadsheets/d/1HxbsyThNqCB4TcUS27J-LIaqQBTEkuJsFOaPU2KNAm8/edit?gid=0#gid=0").sheet1
+st.markdown("""
+# Welcome to Job Automation Bot
+
+This app automates your job applications.
+
+- Enter your LinkedIn and Indeed passwords.
+- Click **Start Applying**.
+""")
