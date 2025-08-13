@@ -13,7 +13,7 @@ creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
 gc = gspread.authorize(creds)
 
 # Open your Google Sheet by URL
-SHEET_URL = "YOUR_SHEET_URL"  # Replace with your sheet URL
+SHEET_URL = "https://docs.google.com/spreadsheets/d/1HxbsyThNqCB4TcUS27J-LIaqQBTEkuJsFOaPU2KNAm8/edit?gid=0#gid=0"  # Replace with your sheet URL
 sheet = gc.open_by_url(SHEET_URL).sheet1
 
 # ==================== STREAMLIT UI ====================
