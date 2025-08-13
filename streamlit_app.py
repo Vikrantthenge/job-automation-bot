@@ -31,13 +31,13 @@ sheet = gc.open_by_url(SHEET_URL).sheet1  # assumes header: Platform | Job URL |
 st.set_page_config(page_title="Job Apply Bot", layout="wide")
 st.title("💼 Job Application Bot (LinkedIn + Indeed)")
 
-st.markdown(\"\"\"
+st.markdown('''
 **Instructions**
 1. Make sure `gspread-creds.json` is in this folder and the service account has Editor access to the Google Sheet.
 2. Sheet header must be exactly: `Platform | Job URL | Status | Applied Date | Notes`.
 3. Add job links in the sheet (Platform = LinkedIn or Indeed), leave Status blank for pending.
 4. Provide your passwords below and click **Start Applying** — browser will open so you can watch.
-\"\"\")
+''')
 
 linkedin_password = st.text_input("LinkedIn password", type="password")
 indeed_password = st.text_input("Indeed password (optional)", type="password")
